@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navigation {
+        height: 80px;
+        padding: 5px;
+        background-color: #D9D9D9;
+    }
+
+    .navbarContainer {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .listItems {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        padding: 12px 0px;
+    }
+
+    .listItems li a {
+        display: inline-block;
+        color: #62abe7;
+        text-align: center;
+        margin: 0px 4px;
+        padding: 18px 20px;
+    }
+
+    /* .black {
+        background-color: #111;
+        color: #fff;
+    } */
+    .listItems .black a{
+        background-color: #111;
+        color: #fff;
+    }
+
+    .listItems li a:hover {
+        cursor: pointer;
+        transition: 0.5s;
+        background-color: #111;
+        color: #fff;
+    }
+
+    .banner {
+        background-color: #06A3CC;
+        height: 300px;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .centerText {
+        
+        display: inline-block;
+        width: fit-content;
+        /* background-color: red; */
+        position: relative;
+        left: 400px;
+        top: 90px;
+    }
+    .leftImg{
+        display: inline-block;
+        position: relative;
+        top: 85px;
+        left: 10px;
+    }
+    .rightImg{
+        display: inline-block;
+        position: relative;
+        top: 85px;
+        left: 790px;
+    }
+
+    .centerText h1 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 100px;
+        color: #fff;
+    }
+
+    .Mainsection{
+        padding:12px;
+        height: 450px;
+        width: 1200px;
+        display: flex;
+        margin: auto;
+    }
+
+    .left{
+        width: 480px;
+        background-color: #FFE469;
+        position: relative;
+    }
+    .innerBox {
+        position: absolute;
+        width: 300px;
+        height: 350px;
+        background-color: #D39ED6;
+        top: 25px;
+        left: -55px;
+    }
+
+    .right{
+        height: 450px;
+        width: 720px;
+    }
+
+    .top{
+        margin-left: 15px;
+        height: 300px;
+        background-color: #ED8719;
+    }
+
+    .top div {
+        padding: 20px;
+    }
+
+    .Input{
+        padding: 15px 15px;
+        width: 450px;
+        background-color: #F8A549;
+        margin: 10px 0px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .btn {
+        padding: 15px 20px;
+        background-color: #F8A549;
+        margin: 10px auto;
+        border-radius: 5px;
+        color: #fff;
+        font-size:medium;
+        outline: none;
+        border: none;
+    }
+
+    .bottom {
+        margin-top: 15px;
+        margin-left: 12px;
+        height: 110px;
+        background-color: #8AE33B;
+    }
+
+    .footer{
+        height: 80px;
+        background-color: #007694;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer ul {
+        display:flex;
+        list-style-type: none;
+        padding: 15px;
+    }
+
+    .footer ul li {
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        text-align: center;
+        margin: 0px auto;
+        padding: 5px 15px;
+        border-right: 2px solid #fff;
+    }
+     .footer ul :last-child{
+        border-right: none;
+      }
+   
+</style>
+
+<body>
+
+    <nav class="navigation">
+        <div class="navbarContainer">
+            <div class="logo">
+                <a href="#">
+                    <img src="Logo.png" alt="logo" height="70" width="70">
+                </a>
+            </div>
+            <div>
+                <ul class="listItems">
+                    <li class="black"><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Profile</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="leftImg">
+                <img src="leftbutton.png" alt="logo">
+            </div>
+            <div class="centerText">
+                <h1>Banner</h1>
+            </div>
+            <div class="rightImg">
+                <img src="rightbutton.png" alt="logo">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="Mainsection">
+        <div class="left">
+            <!-- left box  -->
+            
+            <div class="innerBox"></div>
+        </div>
+        <!-- in right side we have a form and bottom box -->
+        <div class="right">
+            <div class="top">
+                <div>
+                    <form>
+                        <input type="text" class="Input">
+                        <br>
+                        <input type="text" class="Input">
+                        <br>
+                        <input list="List" class="Input">
+                        <br>
+                        <input class="btn" type="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Services</a></li>
+                <li><a>Profile</a></li>
+                <li class="last"><a>Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

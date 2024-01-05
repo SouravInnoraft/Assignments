@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size:large;
+        }
+
+        .wrapper {
+            width: 1200px;
+            height: 600px;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            padding-top: 10px;
+            margin-top: 15px;
+            padding-top: 30px;
+            height: 80px;
+            background-color: #55d4eb;
+        }
+
+        .row {
+            height: 415px;
+        }
+        
+        .sidebar {
+            /* float: left; */
+            padding-top: 20px;
+            margin-top: 15px;
+            float: inline-start;
+            height: 400px;
+            width: 350px;
+            background-color: #a0c263;
+        }
+        .rightside{
+            width: 835px;
+            height: 415px;
+            float: right;
+        }
+        
+
+        .main-content {
+            float: right;
+            padding-top: 20px;
+            margin-top: 15px;
+            width: 835px;
+            height: 290px;
+            background-color: #f5c531;
+        }
+
+        .extra-content {
+            float: right;
+            padding-top: 40px;
+            width: 835px;
+            margin-top: 15px;
+            margin-left: 15px;
+            height: 95px;
+            background-color: #898989;
+        }
+
+
+        .footer {
+            /* display: inline block; */
+            float: left;
+            padding-top: 30px;
+            margin-top: 15px;
+            width: 1200px;
+            height: 80px;
+            background-color: #ffa500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Header</div>
+        <div class="row">
+            <!-- left side -->
+                <div class="sidebar">Sidebar</div>
+
+            <div class="rightside">
+                <div class="main-content">Main Content</div>
+                <div class="extra-content">Extra Content</div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <script>
+        $(".header").click(function(){
+            $(this).css({
+                "background-color":"red"
+            })
+        })
+        $(".sidebar").click(function(){
+            $(this).text("Leftbar")
+        })
+        $(".extra-content").click(function(){
+            $(".main-content").fadeOut(2000);
+        })
+    </script>
+
+
+</body>
+
+</html>

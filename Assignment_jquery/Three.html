@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="#" id="myForm">
+        <label for="FirstName">First Name:</label>
+        <br>
+        <input type="text" name="FirstName" placeholder="Mickey" id="input1">
+        <br>
+
+        <label for="LastName">Last Name:</label>
+        <br>
+        <input type="text" name="LastName" placeholder="Mouse" id="input2">
+        <br>
+        <br>
+        <button class="btn">submit</button>
+    </form>
+    <script>
+        $(".btn").click(function () {
+            let value1 = $("#input1").val();
+            let value2 = $("#input2").val();
+            if (value1 === '' || value2 === '') {
+                alert('Please fill all the fields');
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
+<!-- Please fill all the fields -->

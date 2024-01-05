@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 5px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .black {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box" class="box red"></div>
+    <button id="btn1">cover to circle</button>
+    <button id="btn2">cover to Square</button>
+    <button id="btn3">toggle to Square</button>
+    <ul class="list">
+        <li class="before-start">One</li>
+        <li class="start">
+            <span>two</span>
+        </li>
+        <li class="after-start">Three</li>
+    </ul>
+    <br>
+    <br>
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" name="name">
+    <script>
+        //click
+
+        // $('#btn1').click(function(){
+
+        // })
+
+        // alert
+
+        // $('#btn2').click(function(){
+        //      alert("Have a good day");
+        // })
+
+        //console.log
+
+        // $('#btn3').click(function(){
+        //      console.log("Have a good day");
+        // })
+
+        //this is used to work on currently id ,class etc 
+
+        // $('#btn3').click(function(){
+        //      $(this).fadeOut(5000);
+        // })
+        // fadeIn
+        // $('#btn2').click(function(){
+        //      $("#btn3").fadeIn();
+        // })
+
+        // fadeOut
+        // $('#btn3').click(function(){
+        //      $(this).fadeOut();
+        // })
+
+        //Add Class
+        // $('#btn3').click(function(){
+        //      $("#box").addClass("circle");
+        // })
+        // //removeClass
+        // $('#btn2').click(function(){
+        //      $("#box").removeClass("circle");
+        // })
+
+        //css
+        // $('#btn2').click(function(){
+        //      $("#box").css({
+        //         "background-color":"green",
+        //          "margin-top":"100px"
+        //      });
+        // })
+
+        // Animate
+        // $('#btn2').click(function(){
+        //      $("#box").animate({
+        //          "margin-top":"100px",
+        //           "height":"400px",
+        //           "width":"300px",
+        //           "margin-left":"100px"
+        //      });
+        // })
+
+        //hover
+        // $("#box").hover(
+        //     function () {
+        //         $(this).css("background-color", "green")
+        //     },
+        //     function () {
+        //         $(this).css("background-color", "blue")
+        //     }
+        // )
+
+        // next (selects the sibling level next element if exists)
+        // $(".start").next().css({"background-color": "red", "border": "2px solid red"});
+        // prev (selects the sibling level prev element if exists)
+        //  $(".start").prev().css({"background-color": "yellow", "border": "2px solid red"});
+
+        //closestBegins with the current element
+        // Travels up the DOM tree and returns the first (single) ancestor that matches the passed expression
+        // The returned jQuery object contains zero or one element
+        // $("span").closest("ul").css({ "background-color": "green", "border": "2px solid red" });
+
+        //width and height
+        //     $("#btn3").click(function(){
+        //     let v1=$("#box").width(); //only content
+        //     let v2=$("#box").innerWidth(); //content+padding
+        //     let v3=$("#box").outerWidth();//content+padding+border
+        //     let v4=$("#box").outerWidth(true);//content+padding+border+margin
+        //     alert(`${v1} ${v2} ${v3} ${v4}`)
+        //  })
+        //  $("#btn2").click(function(){
+        //     let v1=$("#box").height();//content
+        //     let v2=$("#box").innerHeight();//content+padding
+        //     let v3=$("#box").outerHeight();//content+padding+border
+        //     let v4=$("#box").outerHeight(true);//content+padding+border+margin
+        //     alert(`${v1} ${v2} ${v3} ${v4}`)
+        //  })
+
+        //offset (This method returns the offset coordinates of the FIRST matched element. It returns an object with 2 properties; the top and left positions in pixels.)
+        // $("#btn1").click(function () {
+        //     var x = $("div").offset();
+        //     alert("Top: " + x.top + " Left: " + x.left);
+        // });
+
+        //change
+        // $("input").change(function () {
+        //     alert("The text has been changed.");
+        // });
+
+        // //append
+        // $("#btn1").click(function () {
+        //     $(".list").append("<li>Append</li>");
+        // })
+
+        // //prepend
+        // $("#btn2").click(function () {
+        //     $(".list").prepend("<li>Prepend</li>");
+        // })
+
+        //callback function
+        // $("#btn1").click(function () {
+        //     $("span").hide("slow",function () {
+        //         alert("The span is now hidden");
+        //     });
+        // });
+
+        //each 
+        // $("#btn1").click(function () {
+        // $("li").each(function () {
+        //     alert($(this).text())
+        // });
+        // });
+
+        //on
+        // $(".box").on({
+        //     click: function () {
+        //         $(this).css("background-color", "purple");
+        //     },
+        //     mouseenter: function () {
+        //         $(this).css("background-color", "yellow");
+        //     },
+        //     mouseleave: function () {
+        //         $(this).css("background-color", "green");
+        //     }
+        // })
+
+        //slide and toggle
+
+        // $("#btn1").click(function(){
+        //     $(".box").slideUp(2000);
+        // })
+        // $("#btn2").click(function(){
+        //     $(".box").slideDown(2000);
+        // })
+        // $("#btn3").click(function(){
+        //     $(".box").slideToggle(2000);
+        // })
+
+        //trigger
+        // $("#btn1").on("click", function () {
+        //     alert($(this).text());
+        // });
+        // $("#btn1").trigger("click");
+
+        //stop
+
+
+        //bind
+
+
+        //scroll
+        $("#btn1").scroll(function () {
+            alert("hello")
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
